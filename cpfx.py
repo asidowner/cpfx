@@ -113,4 +113,11 @@ elif algtype == "42aa": #512
 		buff.append(unwrap_gost(KEKe, bytes.fromhex(ukm + i + cek_mac)).hex())
 	Ks = bytes.fromhex("".join(buff))
 print(" K     = " + Ks.hex())
-print(key2pem(Ks, oids, algooid))
+
+pem = key2pem(Ks, oids, algooid)
+
+if len(sys.argv) == 3:
+	with open(sys.argv[2], 'w') as f:
+		f.write(pem.strip())
+
+print(pem)
