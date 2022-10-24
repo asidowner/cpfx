@@ -4,10 +4,13 @@
 * asn1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.0
 * pyderasn&nbsp;&nbsp; 9.3
 * pygost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.11
+* docker rnix/openssl-gost openssl
 
 ### Использование
 ```
 $ python cpfx.py <ваш файл> <имя файла на выходе (опционально)>
+или
+$ make result pfx=<ваш файл> pem=<имя файла на выходе> cert=<имя серта на выходе> result=<имя результата на выходе>
 ```
 
 ### Нормативные документы
